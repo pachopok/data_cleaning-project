@@ -1,6 +1,7 @@
-library("data.table")
-library("plyr")
-library("dplyr")
+rm(list = ls())
+require("data.table")
+require("plyr")
+require("dplyr")
 ##################
 ### Download and unzip all compressed files in a common folder 
 ##################
@@ -17,7 +18,7 @@ names <- read.delim("features.txt",header = FALSE, sep="\n")
 names <- as.vector(names[,1])
 names <- read.table(text=names, sep=" ", fill=TRUE)[2]
 names <- as.character(names[[1]])
-names <- c("subjectId",names,"labelId")
+names <- c("SubjectId",names,"LabelId")
 
 #append test subject ids to train subject ids
 subjects_train <- fread("subject_train.txt", sep="\n", header=FALSE)
@@ -54,9 +55,9 @@ theTable <- theTable[,targetVariables, with=FALSE]
 ### mean values in the table -- TASK 3
 ##################
 activities <- read.csv("activity_labels.txt",sep = " ", header = FALSE)
-names(activities) <- c("labelId","label")
-theTable <- plyr::join(theTable, activities, by ="labelId")
-theTable$labelId <- list(NULL)
+names(activities) <- c("LabelId","Label")
+theTable <- plyr::join(theTable, activities, by ="LabelId")
+theTable$LabelId <- list(NULL)
 
 ##################
 ### Names for the variables (TASK 4) already assigned. Make them more readable
@@ -66,16 +67,14 @@ names <- names(theTable)
 names <- gsub("-mean\\(\\)","Mean",names)
 names <- gsub("-std\\(\\)","Std",names)
 names <- gsub("^t|^f","",names)
+names <- gsub("BodyBody","Body",names)
 names(theTable) <- names
 
 ##################
 ### TASK 5
 ##################
-summarizedTable <- theTable %>% dplyr::group_by(subjectId, label) %>% dplyr::summarise_each(funs(mean)) %>% dplyr::arrange(subjectId,label)
+summarizedTable <- theTable %>% dplyr::group_by(SubjectId, Label) %>% dplyr::summarise_each(funs(mean)) %>% dplyr::arrange(SubjectId,Label)
 names <- names(summarizedTable)
-names <- paste0("MeanOf",toupper(substr(names[3:length(names)], 1, 1)), substr(names[3:length(names)], 2, nchar(names)))
-names(summarizedTable) <- c("objectId","label",names)
 summarizedTable <- ungroup(summarizedTable)
 setwd("..")
 write.table(summarizedTable, file="summarizedTable.csv",row.names=FALSE)
-
