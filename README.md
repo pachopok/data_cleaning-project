@@ -4,7 +4,7 @@
 ## About the script
 The code in the run_analysis.R performs the following tasks:		
 1. Downloads the required data and unzip them in the "fuci" directory		
-2. Cleans them and transforms them as required by the project tasks. It places them in a single data.frame and extracts the names from features.txt 
+2. Cleans them and transforms them as required by the project tasks. It places them in a single data.frame and extracts the names from features.txt		
 3. Organizes the results by grouping the subject ids and the activities in ascending order		
 4. Write a summarizedTable.csv in the directory from which the code was executed.		
 
