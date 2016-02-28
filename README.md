@@ -1,15 +1,15 @@
 # Project- Getting And Cleaning Data
 
+
 ## About the script
 The code in the run_analysis.R performs the following tasks:
 1. Downloads the required data and unzip them in the "fuci" directory
-2. Cleans them and transforms them as required by the project tasks. Note: the variables, 
-   that have been kept, are the ones ending in std() and mean(). The task description didn't 
-   clearly specify, if std()-X etc needed to be kept. 
+2. Cleans them and transforms them as required by the project tasks. 
 3. Organizes the results by grouping the subject ids and the activities in ascending order
-3. Write a summarizedTable.csv in the directory from which the code was executed.
+4. Write a summarizedTable.csv in the directory from which the code was executed.
 
-The variables are described in CodeBook.md.
+Note1: The variables are described in CodeBook.md.
+Note2: the variables, that have been kept, are the ones ending in std() and mean(). The task description didn't clearly specify, if std()-X etc needed to be kept. 
 
 
 ## Running the script (on Linux systems or Bash)
