@@ -5,12 +5,12 @@
 
 * Label     
     The activity label. Can be the following:       
-     WALKING
-     WALKING_UPSTAIRS
-     WALKING_DOWNSTAIRS
-     SITTING
-     STANDING
-     LAYING
+     * WALKING
+     * WALKING_UPSTAIRS
+     * WALKING_DOWNSTAIRS
+     * SITTING
+     * STANDING
+     * LAYING
 
 * BodyAccMagMean           
     The mean of the body acceleration average in Gs- MeanOf... removed for the sake of abbreviation
