@@ -1,7 +1,7 @@
 <html>
 <h2>DATA DICTIONARY</h2>
 SubjectId<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The identifer for the subject person, starting from 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The identifer for the subject person, starting from 1<br>
 Label<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The activity label. Can be the following:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WALKING<br>
