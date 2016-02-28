@@ -9,7 +9,8 @@ The code in the run_analysis.R performs the following tasks: <br> <br>
 4. Write a summarizedTable.csv in the directory from which the code was executed.<br>
 
 Note1: The variables are described in CodeBook.md.<br>
-Note2: the variables, that have been kept, are the ones ending in std() and mean(). The task description didn't clearly specify, if std()-X etc needed to be kept. 
+Note2: the variables, that have been kept, are the ones ending in std() and mean(). The task description didn't clearly specify, if std()-X etc needed to be kept. <br>
+Note3: data.table, plyr and dplyr packages are required
 
 
 ## Running the script (on Linux systems or Bash)
