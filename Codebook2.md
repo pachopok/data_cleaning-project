@@ -1,13 +1,10 @@
 ##DATA DICTIONARY
 
-* SubjectId
-
+* SubjectId     
     The identifer for the subject person, starting from 1
 
-* Label
-
-    The activity label. Can be the following:
-    
+* Label     
+    The activity label. Can be the following:       
      WALKING
      WALKING_UPSTAIRS
      WALKING_DOWNSTAIRS
@@ -15,10 +12,10 @@
      STANDING
      LAYING
 
-* BodyAccMagMean      
+* BodyAccMagMean           
     The mean of the body acceleration average in Gs- MeanOf... removed for the sake of abbreviation
 
-* BodyAccMagStd   
+* BodyAccMagStd     
     The mean of the body acceleration standard deviations in Gs- MeanOf... removed for the sake of abbreviation
 
 * GravityAccMagMean   
@@ -30,13 +27,13 @@
 * BodyAccJerkMagMean    
      respectively...
 
-* BodyAccJerkMagStd   
+* BodyAccJerkMagStd     
     respectively...
 
 * BodyGyroMagMean   
      respectively...
 
-* BodyGyroMagStd
+* BodyGyroMagStd        
      respectively...
 
 * BodyGyroJerkMagMean   
